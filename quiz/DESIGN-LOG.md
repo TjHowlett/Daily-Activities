@@ -4,7 +4,7 @@ What we decided and why, what was ruled out, and what is still open. Newest date
 
 ## What it is
 
-A single standalone page (`index.html`) hosted on GitHub Pages from its own repo (`tjhowlett/quiz`). Ten multiple-choice questions, done on a phone, usually every morning and sometimes more than once a day. The aim is learning new things, not only being tested. No question may ever repeat.
+A single standalone page (`index.html`) hosted on GitHub Pages from the `quiz/` folder of the Daily-Activities repo (`tjhowlett/Daily-Activities`), at https://tjhowlett.github.io/Daily-Activities/quiz/. Ten multiple-choice questions, done on a phone, usually every morning and sometimes more than once a day. The aim is learning new things, not only being tested. No question may ever repeat.
 
 ## Decisions so far (from the brief, version 5)
 
@@ -31,7 +31,7 @@ A single standalone page (`index.html`) hosted on GitHub Pages from its own repo
 
 **Design.** Phone first, plain and calm, large tap targets, light and dark if easy, plain English, Australian spelling, Melbourne time.
 
-**Repo rules.** Own git repo on `main`, remote `https://github.com/tjhowlett/quiz.git`, set up like the tutors repo. Committed: `index.html`, the starter bank file, `DESIGN-LOG.md`, `CHANGE-LOG.md`, `BRIEF.md`, `TEST-RESULTS.md`, `LINK-CHECKS.md`. Not committed: the `test` folder. Nothing is committed or pushed without my OK. The tutors repo is not touched; any link from the tutors index page needs my OK first.
+**Repo rules.** Lives in the `quiz/` folder of the Daily-Activities repo on `main`, remote `https://github.com/tjhowlett/Daily-Activities.git` (it was its own repo, `tjhowlett/quiz`, until 29 Oct 2026). Committed: `index.html`, the starter bank file, `DESIGN-LOG.md`, `CHANGE-LOG.md`, `BRIEF.md`, `TEST-RESULTS.md`, `LINK-CHECKS.md`. Not committed: the `test` folder. Nothing is committed or pushed without my OK. The tutors repo is not touched; any link from the tutors index page needs my OK first.
 
 ## Ruled out
 
@@ -85,3 +85,5 @@ A single standalone page (`index.html`) hosted on GitHub Pages from its own repo
 - **Look:** pale jade tile (#CFE3DB) with a jade outline (#34705E), a mint stone question mark with a jade outline, and a white reflection line. The reflection first looked odd on the palest fill, so the mint was deepened until the white line shows.
 - **Home screen icon:** square, filled to the edges, 180 px (before: the 192 px picture on black). The tab and shortcut icons keep rounded corners.
 - **Cache tag:** `?v=2` became `?v=3`.
+
+**29 Oct 2026.** The quiz moved into the Daily-Activities repo, in the `quiz/` folder, alongside Art of War Daily. Full commit history was kept. The address is now https://tjhowlett.github.io/Daily-Activities/quiz/ (before: https://tjhowlett.github.io/quiz/). The tutors homepage link was updated to match. The old `tjhowlett/quiz` repo is archived. Older entries above still say "own repo" and the old address; they are left as they were because they record what was true at the time.
