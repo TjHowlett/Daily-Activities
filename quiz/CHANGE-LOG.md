@@ -2,6 +2,16 @@
 
 Newest first. Times are Melbourne time. "Local only" means not yet on GitHub.
 
+## v1.6: 31 Oct 2026. On branch quiz-show-real-error-text (not yet merged)
+
+**What changed:** when Perplexity rejects a call, the quiz now shows Perplexity's own error message (for example "Perplexity error 403: The Agent API requires paid credits.") instead of a fixed guess like "Perplexity didn't accept the key". Error 403 is now treated as a limit/account problem rather than a key problem.
+
+**Why:** the quiz said the key was rejected when the real cause was an account with no paid API credit, which made troubleshooting impossible.
+
+**Files touched:** `index.html` (`AI.call`), `CHANGE-LOG.md`.
+
+**What was tested, and what was not.** Tested with pretend replies (403, 401, 500 with plain text, and a success) and the page's scripts parse. Not tested against the real Perplexity service or on a phone. The quiz's request itself (`/v1/agent`, `model`, `input`, web search) was not changed.
+
 ## v1.5: 19 Oct 2026, about 13:30. Pushed to GitHub (main) as "Quiz: light icon (mint question mark on a light tile)"
 
 **What changed:** the five icon files were redrawn as a light icon: a mint question mark with a white reflection line, on a pale jade tile with a jade outline. This replaces the jade question mark on the black tile. It matches Jasmin's stretching icon style, which was already light. Only the icon files changed. The page itself only has the icon links bumped to `?v=3` so browsers fetch the new files.
