@@ -596,9 +596,16 @@ const AI = {
       clearTimeout(timer);
       if (signal) signal.removeEventListener("abort", onAbort);
     }
-    if (res.status === 401 || res.status === 403) throw mkErr("key", "Perplexity didn't accept the key.");
-    if (res.status === 402 || res.status === 429) throw mkErr("limit", "Perplexity says the account is out of credit or too busy.");
-    if (!res.ok) throw mkErr("server", "Perplexity had a problem (error " + res.status + ").");
+    if (!res.ok) {
+      // Show Perplexity's own words, so the real reason is never hidden.
+      let said = "";
+      try { const j = JSON.parse(text); said = (j && j.error && j.error.message) || (j && j.message) || ""; } catch (e) {}
+      if (!said) said = String(text || "").slice(0, 300);
+      const detail = "Perplexity error " + res.status + (said ? ": " + said : "");
+      if (res.status === 401) throw mkErr("key", detail);
+      if (res.status === 402 || res.status === 403 || res.status === 429) throw mkErr("limit", detail);
+      throw mkErr("server", detail);
+    }
     let data = null;
     try { data = JSON.parse(text); } catch (e) {}
     if (!data) throw mkErr("format", "The AI's answer couldn't be read.");
