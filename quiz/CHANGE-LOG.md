@@ -2,7 +2,7 @@
 
 Newest first. Times are Melbourne time. "Local only" means not yet on GitHub.
 
-## v1.6: 31 Oct 2026. On branch quiz-show-real-error-text (not yet merged)
+## v1.6: 31 Oct 2026. Merged on 1 November 2026
 
 **What changed:** when Perplexity rejects a call, the quiz now shows Perplexity's own error message (for example "Perplexity error 403: The Agent API requires paid credits.") instead of a fixed guess like "Perplexity didn't accept the key". Error 403 is now treated as a limit/account problem rather than a key problem.
 
